@@ -50,7 +50,7 @@
               useragent = document.getElementById("useragent");
           
           fingerprint.innerHTML = result;
-          fingerprintKeys.innerHTML = keys.join('<br>');
+          fingerprintKeys.innerHTML = keys.map(function(item) { return item.key + ":" + item.value } ).join('<br>');
           useragent.innerHTML = navigator.userAgent;
         })
       }();
